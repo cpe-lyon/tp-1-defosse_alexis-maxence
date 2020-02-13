@@ -218,5 +218,71 @@
         Locate utilise une **base de donnée** pour rechercher des fichiers... Il faut mettre à jours cette base de données
         manuellmenent pour que *locate* puisse trouver notre fichier. Il faut faire : **updatedb**.
 
+
+**Exercice 3**
+
+1. Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec
+nano
+
+cd /home
+mkdir TP1/
+sudo cp /var/log/syslog /home/TP1/log.txt
+sudo nano /TP1/log.txt
+
+//ROOT//
+sudo passwd root //créer un mdp pour root
+su root
+
+2. Remplacez toutes les occurrences du mot kernel par le mot noyau
+
+ctrl + altgr + \
+Ensuite précise que le mot a changer est kernel, et ensuite on met noyau pour le remplacement.
+Appuyer sur "a" pour l'appliquer a toutes les occurances.
+
+
+3. Déplacer les 10 premières lignes à la fin du fichier
+
+Au début du fichier, CTRL + K (10 fois)
+Et ensuite ctrl + U à la fin 
+(Pour aller à la fin on peut faire CTRL + _ et on rentre 9999)
+
+
+4. Annulez cette action
+
+ALT+U
+
+5. Enregistrez le fichier avant de quitter nano
+
+CTRL + O
+CTRL + X
+
+**Exercice 4. Personnalisation du shell**
+
+
+3. Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter
+puis se reconnecter ; mais il existe un autre moyen : la commande source .bashrc. Testez-la, l’invite
+de commande devrait immédiatement passer en couleurs.
+
+ Enlever les commentaire de "force_color_prompt=yes"  dans ~./bashrc 
+ puis faire source ~./bashrc
+ L'invite de commande passe de blanc à vert.
+
+4. Les couleurs par défauts (surtout celle du dossier courant) ne sont pas très visibles. Dans .bashrc,
+cherchez les lignes commençant par PS1= ; elles indiquent la mise en forme de l’invite de commande(selon que l’on est en couleurs ou non).
+
+
+Pour rajouter l'heure il faut mettre au début (aprés ) : \[\e[91m\]\t  
+
+                               -> heures avec les secondes en rouge light.
+
+Pour le tirer il faut mettre \[\e[00m\]-
+
+                               -> créer un tiret simple sans couleur
+
+Pour mettre le répértoire courant avec un bleu plus claire il faut mettre 36m pour le répértoire (\w) -> \[\e[01;36m\]\w
+
+PS1 complet :
+'${debian_chroot:+($debian_chroot)} \[\e[91m\]\t \[\e[00m\]- \[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;36m\]\w\[\033[00m\]\]$'
+
    
 
