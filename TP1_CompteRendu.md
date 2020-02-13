@@ -225,18 +225,21 @@
 nano
 
   -> sudo cp /var/log/syslog /home/TP1/log.txt
+
   -> sudo nano /TP1/log.txt
 
 //ROOT//
 
-sudo passwd root //créer un mdp pour root
-su root //Utiliser root
+sudo passwd root //créer un mdp pour root 
+
+su root //Utiliser root 
 
 2. Remplacez toutes les occurrences du mot kernel par le mot noyau
 
-ctrl + altgr + \
-Ensuite précise que le mot a changer est kernel, et ensuite on met noyau pour le remplacement.
-Appuyer sur "a" pour l'appliquer a toutes les occurances.
+**ctrl + altgr + \**
+
+Ensuite précise que le mot a changer est *kernel*, et ensuite on met *noyau* pour le remplacement.
+Puis appuyer sur "A" pour l'appliquer a toutes les occurances.
 
 
 3. Déplacer les 10 premières lignes à la fin du fichier
