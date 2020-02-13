@@ -73,8 +73,10 @@
      Dossier1 ; que se passe-t-il ? 
    
    -> *rm* permet de supprimer un fichier, ici en l'occurence **Fichier1** mais elle ne permet pas de supprimer un dossier.
-      Pour supprimer un dossier, il faut utiliser *rmdir*. (message d'erreur si on utilise *rm* sur un dossier.               
-      Cela donne donc:                                                                                                        
+      Pour supprimer un dossier, il faut utiliser *rmdir*. (message d'erreur si on utilise *rm* sur un dossier.             
+      
+      Cela donne donc: 
+      
       **rm Dossier1/Fichier1 ** et **rmdir Dossier1** 
       
    9) quelle commande permet de supprimer un dossier ? **rmdir**
@@ -109,7 +111,7 @@
    4) Essayez la commande ll. Existe-t-il une entrée de manuel pour cette commande ?
       Utilisez les commandes alias ou alias pour en savoir plus sur la nature de cette commande.
 
-      -> !!!!!!!!!!A faire sur la VM!!!!!!!!!!!!!!!!!!
+      -> **Alias ll='ls -alF'**
 
    5) Quelle commande permet d’afficher les fichiers contenus dans le dossier /bin ? -> **ls -F /bin**
 
@@ -169,44 +171,52 @@
    15) Que fait la commande dmesg | less ? -> Permet devoir les logs relatifs au kernel (noyau).
 
    16) Affichez à l’écran le fichier /etc/passwd ; que contient-il ? Quelle commande permet
-      d’afficher la page de manuel de ce fichier ?                                                                                      
+      d’afficher la page de manuel de ce fichier ?                                                                           
+      
       -> Ce dossier stocke l'intégralité des compte utilisateurs. (base de données)
          Cette base de données est liée à l'éxécutable *passwd*, consultable via le *man* avec **man 5 passwd**.
 
    17) Affichez seulement la première colonne triée par ordre alphabétique inverse
 
-       -> Tri inverse première colonne **sort -r | cut -c1  /etc/passwd**.
+       -> Tri inverse première colonne **sort -d -r | cut -c1  /etc/passwd**.
 
    18) Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine 
        (pas seulement les utilisateurs connectés) ?
 
-       -> ** **
+       -> **wc /etc/passwd**
    
    19) Combien de pages de manuel comportent le mot-clé conversion dans leur description ?
 
-       -> ** **                                                                                                               
+       -> ** **                                                                                                             
+       
     20) A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents 
         sur la machine
 
-        -> **find / -name passwd**                                                                                             
+        -> **find / -name passwd**                                                                                           
+        
     21) Modifiez la commande précédente pour que la liste des fichiers trouvés soit 
         enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient 
         redirigées vers le fichier spécial /dev/null.
 
-        -> **find / -name "passwd" -print > test**                                                                             
+        -> **find / -name "passwd" -print > test**                                                                           
+        
     22) Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini 
         l’alias ll vu précédemment.
 
-        -> **find . | grep ll**                                                                                                             
+        -> **cat .bashrc | grep ll**                                                                                         
+        
     23) Utilisez la commande locate pour trouver le fichier history.log.
 
-        -> **locate -A history.log**                                                                                          
+        -> **locate -A history.log**                                                                                         
+       
     24) Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. 
         Apparaît-il ? Pourquoi ?
 
         -> **touch testDeFichier**
 
-        -> **locate -a testDeFichier** (aucun résultats) après pourquoi...
+        -> **locate -a testDeFichier** (aucun résultats) 
+        Locate utilise une **base de donnée** pour rechercher des fichiers... Il faut mettre à jours cette base de données
+        manuellmenent pour que *locate* puisse trouver notre fichier. Il faut faire : **updatedb**.
 
    
 
