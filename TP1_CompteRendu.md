@@ -198,7 +198,7 @@
         enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient 
         redirigées vers le fichier spécial /dev/null.
 
-        -> **find / -name "passwd" -print 1> test.txt 2> /dev/null**                                                                           
+        -> **find / -name passwd > list_passwd_files.txt 2> /dev/null**                                                                           
         
     22) Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini 
         l’alias ll vu précédemment.
