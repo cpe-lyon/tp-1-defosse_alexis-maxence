@@ -164,7 +164,7 @@
         
        -> 5 dernière ligne : **tail -n 15 /var/log/syslog**
    
-       -> entre 10 et 20 :** tail -n 10 | head -20 /var/log/syslog **
+       -> entre 10 et 20 : **tail -n 10 | head -20 /var/log/syslog**
 
    15) Que fait la commande dmesg | less ? -> Permet devoir les logs relatifs au kernel (noyau).
 
