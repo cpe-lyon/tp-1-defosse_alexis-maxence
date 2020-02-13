@@ -36,7 +36,7 @@
       
       Dans le cas du *man*, on trouve: **[-Z] [[section] page ...] ...**
       
-      On peut utiliser 
+      On peut utiliser aussi **man 6 intro**.
  
  **->Navigation dans l'arborescence des fichiers:**
  
@@ -174,7 +174,7 @@
       d’afficher la page de manuel de ce fichier ?
 
       -> Ce dossier stocke l'intégralité des compte utilisateurs. (base de données)
-        Cette base de données est liée à l'éxécutable *passwd*, consultable via le *man*.
+        Cette base de données est liée à l'éxécutable *passwd*, consultable via le *man* avec **man 5 passwd**.
 
    17) Affichez seulement la première colonne triée par ordre alphabétique inverse
 
