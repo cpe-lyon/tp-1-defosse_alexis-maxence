@@ -224,14 +224,13 @@
 1. Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec
 nano
 
-cd /home
-mkdir TP1/
-sudo cp /var/log/syslog /home/TP1/log.txt
-sudo nano /TP1/log.txt
+  -> sudo cp /var/log/syslog /home/TP1/log.txt
+  -> sudo nano /TP1/log.txt
 
 //ROOT//
+
 sudo passwd root //créer un mdp pour root
-su root
+su root //Utiliser root
 
 2. Remplacez toutes les occurrences du mot kernel par le mot noyau
 
