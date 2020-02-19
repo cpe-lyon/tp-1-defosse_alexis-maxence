@@ -36,17 +36,17 @@
       
       Dans le cas du *man*, on trouve: **[-Z] [[section] page ...] ...**
       
-      On peut utiliser aussi **man 6 intro**.
- 
+      On utilise donc **man 6 intro** pour afficher la section demandée, elle parle des *"programmes funs"* du système.
+  
  **->Navigation dans l'arborescence des fichiers:**
  
  1) allez dans le dossier /var/log : *cd /var/log*
  
  2) remontez dans le dossier parent (/var) en utilisant un chemin relatif : *cd /var*
  
- 3) retournez dans le dossier personnel : *cd ~*
+ 3) retournez dans le dossier personnel : *cd $home* ou $home est une variable d'environnement correspondant à notre répertoire personnel. On peut aussi utiliser **cd ~**.
  
- 4) revenez au dossier précédent (/var) sans **utiliser de chemin** : 
+ 4) revenez au dossier précédent (/var) sans **utiliser de chemin** : **cd -**
  
  5) essayez d’accéder au dossier /root ; que se passe-t-il ? : *cd /root*
  
@@ -102,11 +102,11 @@
    2) Dans votre dossier personnel, tapez successivement les commandes ls puis la ; 
       que peut-on en déduire sur les fichiers commençant par un point ?
 
-      -> *ls* permet de lister les fichiers/répertoires d'un répertoire.
+      -> **ls** permet de lister les fichiers/répertoires d'un répertoire.
 
-      -> *la* fait la même chose mais permet de voir les fichiers *cachés*.
+      -> **la** fait la même chose mais permet de voir les fichiers *cachés*.
 
-   3) Où se situe le programme ls ? -> Dans le répertoire *bin/ls*.
+   3) Où se situe le programme ls ? -> Dans le répertoire **bin/ls**.
 
    4) Essayez la commande ll. Existe-t-il une entrée de manuel pour cette commande ?
       Utilisez les commandes alias ou alias pour en savoir plus sur la nature de cette commande.
@@ -123,11 +123,11 @@
 
       -> La première fois cela va créer le fichier *plop* et écrire 'yo' dedans.
 
-      -> La seconde fois cela va ré-écrire le 'yo' dans le fichier *plop*.
+      -> La seconde fois cela va ré-écrire le fichier *plop*, donc il restera inchangé.
 
    9) Que fait la commande echo 'yo' >> plop exécutée 2 fois ?
 
-      -> Idemn sauf que l'on va *ajouter* du contenu et non le ré-écrire.
+      -> Idem sauf que l'on va *ajouter* du contenu et non le ré-écrire. Ducoup, le fichier va contenir *yo* deux fois.
 
    10) A quoi sert la commande file ? Essayez la sur des fichiers de types différents.
 
