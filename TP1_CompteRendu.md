@@ -157,7 +157,7 @@
    13) Affichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent
        d’interrompre et reprendre le défilement à l’écran ?
 
-       -> **CTRL-Z**
+       -> **CTRL + S**
 
    14) Affichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, 
        puis seulement les lignes 10 à 20.
