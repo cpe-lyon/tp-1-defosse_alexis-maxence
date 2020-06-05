@@ -1,73 +1,73 @@
-**----------------------------------------------------------|COMPTE RENDU TP1|--------------------------------------------------------------**
+**----------------------------------------------------------|Prise en main Linux & Bash|----------------------------------------------**
 
 **Exercice 2: Prise en main de l'interpreteur de commandes**
 
-**->Manuel:**
+**Manuel:**
 
 1) A l’aide du manuel, identifiez le rôle de la commande which ?
 
--> Le manuel *man* permet d'acceder au informations relative à une commande spécifique.
+        -> Le manuel *man* permet d'acceder au informations relative à une commande spécifique.
 
-   Dans le cas de *wich*, la desciption est la suivante:
-   
-   " which  retourne  le  chemin des fichiers qui seraient exécutés dans
-     l'environnement courant si ses arguments avaient été  donnés  comme
-     commandes  dans un interpréteur de commandes strictement conforme à
-     POSIX. Pour ce faire, which  cherche  dans  la  variable  PATH  les
-     fichiers  exécutables  correspondants aux noms des arguments. which
-     ne déréférence pas les liens symboliques."
+        Dans le cas de *wich*, la desciption est la suivante:
+
+        " which  retourne  le  chemin des fichiers qui seraient exécutés dans
+        l'environnement courant si ses arguments avaient été  donnés  comme
+        commandes  dans un interpréteur de commandes strictement conforme à
+        POSIX. Pour ce faire, which  cherche  dans  la  variable  PATH  les
+        fichiers  exécutables  correspondants aux noms des arguments. which
+        ne déréférence pas les liens symboliques."
      
 2) Quand on consulte une page du manuel, comment peut-on rechercher un terme (par exemple, chercher le terme 
    option dans la page de manuel de which ?
 
--> Pour faire l'action identique à *Ctrl-f" dans windows pour faire une recherche, dans linux et plus particulèrement
-   dans le *man*, on peut utiliser "/pattern" pour rechercher en bas à partir de notre position ou "?pattern" pour la 
-   recherche vers le haut. Dans cette question la réponse est donc **"/option"** ou **"?option"**.
+         Pour faire l'action identique à *Ctrl-f" dans windows pour faire une recherche, dans linux et plus particulèrement
+         dans le *man*, on peut utiliser "/pattern" pour rechercher en bas à partir de notre position ou "?pattern" pour la 
+         recherche vers le haut. Dans cette question la réponse est donc **"/option"** ou **"?option"**.
    
 3) Comment quitte-t-on le manuel ?
 
--> Comme indiquer dans le manuel *"press h for help or q to quit"*, donc il faut appuyer sur la touche **q**.
+         Comme indiquer dans le manuel *"press h for help or q to quit"*, donc il faut appuyer sur la touche **q**.
 
 4) Chaque section du manuel a une première page, qui présente le contenu de la section. Afficher la première page de la 
    section 6 ; de quoi parle cette section ?
    
-   -> Pour savoir comment rechercher une page spécifique dans le man, on peut regarder le **man du man**, et ainsi regarder
-      l'option correspondante.
-      
-      Dans le cas du *man*, on trouve: **[-Z] [[section] page ...] ...**
-      
-      On utilise donc **man 6 intro** pour afficher la section demandée, elle parle des *"programmes funs"* du système.
+         Pour savoir comment rechercher une page spécifique dans le man, on peut regarder le **man du man**, et ainsi regarder
+         l'option correspondante.
+
+         Dans le cas du *man*, on trouve: [-Z] [[section] page ...] ...
+
+         On utilise donc **man 6 intro** pour afficher la section demandée, elle parle des *"programmes funs"* du système.
   
- **->Navigation dans l'arborescence des fichiers:**
+ **Navigation dans l'arborescence des fichiers:**
  
  1) allez dans le dossier /var/log : *cd /var/log*
  
  2) remontez dans le dossier parent (/var) en utilisant un chemin relatif : *cd /var*
  
- 3) retournez dans le dossier personnel : *cd $home* ou $home est une variable d'environnement correspondant à notre répertoire personnel. On peut aussi utiliser **cd ~**.
+ 3) retournez dans le dossier personnel : **cd $home** ou $home est une variable d'environnement correspondant à notre répertoire personnel. On peut aussi utiliser **cd ~**.
  
  4) revenez au dossier précédent (/var) sans **utiliser de chemin** : **cd -**
  
- 5) essayez d’accéder au dossier /root ; que se passe-t-il ? : *cd /root*
+ 5) essayez d’accéder au dossier /root ; que se passe-t-il ? : **cd /root**
  
-    -> Evidemment, on tombe sur un message d'erreur car nous n'avons pas les droits administrateurs...
+         Evidemment, on tombe sur un message d'erreur car nous n'avons pas les droits administrateurs...
     
  6) essayez la commande sudo cd /root ; que se passe-t-il ? Expliquez : *sudo cd /root*
  
-    -> Ne fonctionne pas car *cd* n'est pas un *programme* mais une *commande*: et sudo n'autorise que l'éxécution de
-       programmes en mode *root*. **Sa ne marchera pas.**
+          Ne fonctionne pas car cd n'est pas un programme mais une commande: et sudo n'autorise que l'éxécution de
+          programmes en mode root: sa ne marchera pas.
        
  7) à partir de votre dossier personnel, créez l’arborescence suivante...
  
-   -> D'abord on créer les dossier via la commande *mkdir "nomDeDossier"*. Donc si on se trouve dans notre dossier personnel:
+         a) D'abord on créer les dossier via la commande *mkdir "nomDeDossier"*. Donc si on se trouve dans notre dossier personnel:
    
-   **mkdir Dossier1 Dossier2**
+            mkdir Dossier1 Dossier2
    
-   **mkdir Dossier2/Dossier2.1 Dossier2/Dossier2.2**
+            mkdir Dossier2/Dossier2.1 Dossier2/Dossier2.2
    
-   -> Ensuite on créer les fichiers via la commande *touch*:
+         b) Ensuite on créer les fichiers via la commande *touch*:
    
-   **touch Dossier1/Fichier1 Dossier2/Dossier2.2/Fichier2 Dossier2/Dossier2.2/Fichier3**
+            touch Dossier1/Fichier1 Dossier2/Dossier2.2/Fichier2 Dossier2/Dossier2.2/Fichier3
  
   8) revenez dans votre dossier personnel ; à l’aide de la commande rm, essayez de supprimer Fichier1, puis
      Dossier1 ; que se passe-t-il ? 
